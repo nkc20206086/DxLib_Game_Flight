@@ -41,12 +41,7 @@ public:
 		
 	}
 
-
 private:
-	//“–‚½‚è”»’èŠÇ——p”Ô†
-	//int collisionNum;
-//	bool ishit;
 	int modelhandle;
 
-	//Transform _transform;
 };

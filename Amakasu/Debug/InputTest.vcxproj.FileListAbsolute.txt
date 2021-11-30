@@ -1,2 +1,3 @@
 C:\Users\user\Desktop\DxLib\InputTest\Debug\InputTest.exe
 C:\Users\user\Desktop\DxLib\GameObjectTest\Debug\GameObjectTest.exe
+C:\Users\user\Desktop\DxLib\GameProgramKadai\Amakasu\Debug\GameObjectTest.exe

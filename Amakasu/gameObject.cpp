@@ -29,7 +29,7 @@ bool GameObject::SetModelHandle(const TCHAR* modelname)
 }
 void GameObject::DrawObject()
 {
-	Transform* temp = (Transform*)comp[0];
+	Transform* temp = (Transform*)comp[1];
 	MV1SetPosition(modelhandle, temp->position);
 	MV1DrawModel(modelhandle);
 	delete(temp);

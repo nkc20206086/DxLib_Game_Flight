@@ -46,8 +46,10 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 		VECTOR vec = VGet(0, 0, 0);
 		VECTOR ringVec = VGet(0, 300, 0);
 		//ÇRDÉÇÉfÉãÇÃì«Ç›çûÇ›
-		player.SetPlayerModelHandle("Player.mv1");
-		ring.SetRingModelHandle("Player.mv1");
+		player.SetModelHandle("Player.mv1");
+
+		ring.SetModelHandle("Player.mv1");
+
 		SetCameraPositionAndTarget_UpVecY(VGet(0, 0, -1000), VGet(0, 0, 0));
 
 
@@ -112,17 +114,15 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 			{
 				player.HitObj.push_back(ring);
 			}
-		
+			if (input.GetKeyDown(KEY_INPUT_RETURN))
+			{
+				player.GetCompornent<Transform>().position = VGet(0, 0, 0);
+			}
+			
 			player.PlayerSetPos(vec);
 		
-		
-
-			if (!player.HitObj.empty())
-			{
-				player.PlayerSetPos(vec);
-			}
-			/*ring.SetRingPos(ringVec);
-			ring.DrawRing();*/
+			player.DrawObject();
+			
 			//player.DrawPlayer();
 			ScreenFlip();
 			input.SetInputStateOld();

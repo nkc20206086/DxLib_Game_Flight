@@ -6,6 +6,10 @@ class Transform:public Compornent
 public:
 	inline Transform();
 	inline ~Transform();
+	inline void AddPos(float x, float y, float z);
+	inline void AddRotate(float x, float y, float z);
+	inline void AddScale(float x, float y, float z);
+	
 	VECTOR position;
 	VECTOR rotation;
 	VECTOR scale;
@@ -20,4 +24,22 @@ Transform::Transform()
 Transform::~Transform()
 {
 	delete(this);
+}
+void Transform::AddPos(float x, float y, float z)
+{
+	position.x += x;
+	position.y += y;
+	position.z += z;
+}
+void Transform::AddRotate(float x, float y, float z)
+{
+	rotation.x += x;
+	rotation.y += y;
+	rotation.z += z;
+}
+void Transform::AddScale(float x, float y, float z)
+{
+	scale.x += x;
+	scale.y += y;
+	scale.z += z;
 }

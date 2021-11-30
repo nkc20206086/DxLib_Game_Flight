@@ -4,9 +4,9 @@
 class Ring :public GameObject
 {
 public:
-	bool SetRingModelHandle(const TCHAR* ModelName);
+	/*bool SetRingModelHandle(const TCHAR* ModelName);
 	void DrawRing();
-	void SetRingPos(VECTOR vec);
+	void SetRingPos(VECTOR vec);*/
 private:
-	int Modelhandle;
+	//int Modelhandle;
 };
