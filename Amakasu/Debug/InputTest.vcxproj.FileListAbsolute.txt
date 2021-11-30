@@ -1,0 +1,2 @@
+C:\Users\user\Desktop\DxLib\InputTest\Debug\InputTest.exe
+C:\Users\user\Desktop\DxLib\GameObjectTest\Debug\GameObjectTest.exe
