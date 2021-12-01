@@ -25,14 +25,6 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 		//int ModelHandle;
 		int LightHandle;
 
-		//SEÇÃì«Ç›çûÇ›
-		//int SeZkey;
-		//int SeXkey;
-		//int SeCkey;
-		/*SeZkey = LoadSoundMem("nassu.mp3");
-		SeXkey = LoadSoundMem("OSSU.mp3");
-		SeCkey = LoadSoundMem("ussu2.mp3");*/
-
 
 		char keyState[256];
 		char oldKeyState[256];
@@ -110,10 +102,10 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 			}
 
 #pragma endregion
-			if (input.GetKeyDown(KEY_INPUT_SPACE))
+			/*if (input.GetKeyDown(KEY_INPUT_SPACE))
 			{
 				player.HitObj.push_back(ring);
-			}
+			}*/
 			if (input.GetKeyDown(KEY_INPUT_RETURN))
 			{
 				player.GetCompornent<Transform>().position = VGet(0, 0, 0);

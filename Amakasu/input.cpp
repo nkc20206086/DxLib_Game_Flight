@@ -18,9 +18,6 @@ void MyInput::SetInputStateOld()//最後に呼ぶ
 	}
 }
 
-
-
-
 //こういうインプットがあるといいね
 bool MyInput::GetKey(int v_key/*[KEY_MAX]*/)//引数は押されたか確認したいキーの番号
 {

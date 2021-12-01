@@ -1,7 +1,7 @@
 #pragma once
 #include"Compornent.h"
 #include"DxLib.h"
-class Transform:public Compornent
+class Transform :public Compornent
 {
 public:
 	inline Transform();
@@ -9,7 +9,7 @@ public:
 	inline void AddPos(float x, float y, float z);
 	inline void AddRotate(float x, float y, float z);
 	inline void AddScale(float x, float y, float z);
-	
+
 	VECTOR position;
 	VECTOR rotation;
 	VECTOR scale;

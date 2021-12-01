@@ -1,4 +1,5 @@
 #include"Collider.h"
+
 void Collider::SetCollisionObj(VECTOR vec, float lenge)
 {
 	thisCollision.colvec = vec;

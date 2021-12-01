@@ -10,8 +10,8 @@ public:
 	~Psysics();
 
 	//当たり判定をするオブジェクトを保存しておく
-	std::map<int, Collider&>CollisionDic;
-	std::map<int, GameObject&>CollisionGameObjectDic;
+	std::map<int, Collider*>CollisionDic;
+	std::map<int, GameObject*>CollisionGameObjectDic;
 
 
 	//メインループで最初に呼ぶ。　当たり判定する奴を登録する

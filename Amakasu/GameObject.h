@@ -25,7 +25,7 @@ public:
 	//コンポーネントを持つ用の配列
 	Compornent* comp[3];
 
-	std::vector<GameObject> HitObj;
+	std::vector<GameObject*> HitObj;
 
 	//自分の持っているコンポーネントを送りつける
 	template<typename T>
