@@ -1,20 +1,13 @@
-#include <DxLib.h>
+//#include <DxLib.h>
 #include <memory>
 #include "headerTest.h"
 #include "inputTest.h"
 #include "Player.h"
 #include "ring.h"
-#include "Collider.h"
-
+//#include "Collider.h"
+#include"PsysicsController.h"
 int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int nCmdShow)
 {
-	unsigned int Cr;
-	Cr = GetColor(255, 255, 255);
-	MyInput input = MyInput();
-	Player player = Player();
-	Ring ring = Ring();
-
-	Collider colliider = Collider();
 
 	if (DxLib_Init() == -1)        // ＤＸライブラリ初期化処理
 	{
@@ -22,7 +15,14 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 	}
 	auto draw = std::make_unique<DxDraw>();//スマートポインタ　　C#と同じように勝手にガベージコレクションしてくれる
 	{
-		//int ModelHandle;
+		unsigned int Cr;
+		Cr = GetColor(255, 255, 255);
+		MyInput input = MyInput();
+		Player player = Player();
+		Ring ring = Ring();
+
+		Collider colliider = Collider();
+
 		int LightHandle;
 
 
@@ -39,6 +39,7 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 		VECTOR ringVec = VGet(0, 300, 0);
 		//３Dモデルの読み込み
 		player.SetModelHandle("Player.mv1");
+		//player.GetCompornent<Collider>().SetCollisionObj()
 
 		ring.SetModelHandle("Player.mv1");
 
@@ -51,10 +52,10 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 		//ｘじくにライト作成
 		LightHandle = CreateDirLightHandle(VGet(-1.0f, -1.0f, 1.0f));
 
-	
+
 		//player.PlayerSetPos(vec);
 
-		
+
 
 		while (ProcessMessage() == 0)
 		{
@@ -62,7 +63,7 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 			//GetHitKeyStateAll(keyState);
 			input.SetInputState();
 
-		
+
 #pragma region インプット関連
 			if (input.GetKey(KEY_INPUT_A))
 			{
@@ -110,11 +111,11 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 			{
 				player.GetCompornent<Transform>().position = VGet(0, 0, 0);
 			}
-			
+
 			player.PlayerSetPos(vec);
-		
+
 			player.DrawObject();
-			
+
 			//player.DrawPlayer();
 			ScreenFlip();
 			input.SetInputStateOld();

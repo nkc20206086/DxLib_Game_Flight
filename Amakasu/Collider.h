@@ -15,7 +15,7 @@ public:
 	//Å‰‚ÉŒÄ‚Ô‚â‚Â@“–‚½‚è”»’è‚Ì’l‚ğ“o˜^‚·‚é
 	void SetCollisionObj(VECTOR vec, float lenge);
 
-
+	
 	//‰Šú‰»
 	//void ResetCollisionObj();
 

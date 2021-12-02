@@ -36,43 +36,47 @@ void Psysics::DelateCollision(GameObject& obj)
 }
 void Psysics::CalculateCollision()
 {
-	//計算前にオブジェクトの当たり判定フラグをリセットする
-	for (unsigned int i = 0; CollisionDic.size() >= i; i++)
-	{
-		CollisionDic[i]->HitObjDataNum.clear();
-	}
+	//auto begin = CollisionDic.begin();
+	//auto end = CollisionDic.end();
+	////計算前にオブジェクトの当たり判定フラグをリセットする
+	//for (auto iter=begin; iter != end; iter++)
+	//{
+	//	//CollisionDic[i]->HitObjDataNum.clear();
+	//	iter->second->HitObjDataNum.clear();
+	//}
 
 	for (int i = CollisionDic.size(); i > 0; --i)
 	{
-		//比べるオブジェクト
-		mainCol = CollisionDic[i]->thisCollision;
 
-		for (int j = 0; j < i; ++j)
-		{
-			sabuCol = CollisionDic[j]->thisCollision;
-			//当たり判定計算
-			if
-				(
-					(sabuCol.colvec.x - mainCol.colvec.x) *
-					(sabuCol.colvec.x - mainCol.colvec.x)
-					+
-					(sabuCol.colvec.y - mainCol.colvec.y) *
-					(sabuCol.colvec.y - mainCol.colvec.y)
-					+
-					(sabuCol.colvec.z - mainCol.colvec.z) *
-					(sabuCol.colvec.z - mainCol.colvec.z)
-					<=
-					sabuCol.lange + mainCol.lange
-					*
-					sabuCol.lange + mainCol.lange
-					)
-			{
-				//Collisionで受け取りたいからGameobject登録しておきたい
-				CollisionGameObjectDic[j]->HitObj.push_back(CollisionGameObjectDic[i]);
+		////比べるオブジェクト
+		//mainCol = CollisionDic[i]->thisCollision;
 
-				CollisionGameObjectDic[i]->HitObj.push_back(CollisionGameObjectDic[j]);
-			}
+		//for (int j = 0; j < i; ++j)
+		//{
+		//	sabuCol = CollisionDic[j]->thisCollision;
+		//	//当たり判定計算
+		//	if
+		//		(
+		//			(sabuCol.colvec.x - mainCol.colvec.x) *
+		//			(sabuCol.colvec.x - mainCol.colvec.x)
+		//			+
+		//			(sabuCol.colvec.y - mainCol.colvec.y) *
+		//			(sabuCol.colvec.y - mainCol.colvec.y)
+		//			+
+		//			(sabuCol.colvec.z - mainCol.colvec.z) *
+		//			(sabuCol.colvec.z - mainCol.colvec.z)
+		//			<=
+		//			sabuCol.lange + mainCol.lange
+		//			*
+		//			sabuCol.lange + mainCol.lange
+		//			)
+		//	{
+		//		//Collisionで受け取りたいからGameobject登録しておきたい
+		//		CollisionGameObjectDic[j]->HitObj.push_back(CollisionGameObjectDic[i]);
 
-		}
+		//		CollisionGameObjectDic[i]->HitObj.push_back(CollisionGameObjectDic[j]);
+		//	}
+
+		//}
 	}
 }
