@@ -1,2 +1,0 @@
-C:\Users\user\Desktop\授業ファイル\ゲームプログラミング\GT2A\後期制作\Test02\Debug\Test02.exe
-C:\Users\user\Desktop\授業ファイル\ゲームプログラミング\GT2A\後期制作\Test02\Debug\Test02.pdb
