@@ -1,0 +1,9 @@
+My Profession is Planner!!!!!!!!!!!!!!!!!!!
+Your Profession is Programer!!!!!!!!!!!!!!!!And SoundComporser!!!!!!!!!!!
+
+「Test」はこうめいが作ったシーン遷移
+「Test2」はもっと単純なシーン遷移(一つのソースで完結してるやつ)
+
+が入っています
+
+(随時追加されていく、かもしれない)
