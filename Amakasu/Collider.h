@@ -10,7 +10,7 @@ class Collider :public Compornent
 private:
 
 public:
-	std::vector<int> HitObjDataNum;
+	std::vector<GameObject*> HitObjDataNum;
 	ColliderSet thisCollision;
 	//Å‰‚ÉŒÄ‚Ô‚â‚Â@“–‚½‚è”»’è‚Ì’l‚ğ“o˜^‚·‚é
 	void SetCollisionSetting(VECTOR vec, float lenge);
